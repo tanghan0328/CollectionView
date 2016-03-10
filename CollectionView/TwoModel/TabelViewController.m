@@ -49,6 +49,7 @@
     if(cell == nil){
 //        NSArray *nibContents = [[NSBundle mainBundle]loadNibNamed:@"TableViewCell" owner:nil options:nil];
 //        cell = [nibContents firstObject];
+        
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
         cell.imageView.image = [UIImage imageNamed:@"123_02"];
         cell.textLabel.text = @"测试数据";
