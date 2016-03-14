@@ -27,6 +27,7 @@
 		24C2DD341C8D559B00F0F527 /* product_list_list_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 24C2DD321C8D559B00F0F527 /* product_list_list_btn@2x.png */; };
 		24C2DD381C8D6B1700F0F527 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2DD361C8D6B1700F0F527 /* TableViewCell.m */; };
 		24C2DD391C8D6B1700F0F527 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C2DD371C8D6B1700F0F527 /* TableViewCell.xib */; };
+		24ED56A11C964DBA005405B4 /* TWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ED56A01C964DBA005405B4 /* TWCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		24C2DD351C8D6B1700F0F527 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		24C2DD361C8D6B1700F0F527 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		24C2DD371C8D6B1700F0F527 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		24ED569F1C964DBA005405B4 /* TWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCollectionViewCell.h; sourceTree = "<group>"; };
+		24ED56A01C964DBA005405B4 /* TWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				24C2DD371C8D6B1700F0F527 /* TableViewCell.xib */,
 				24C2DD291C8D1F7300F0F527 /* TWCollectionViewController.h */,
 				24C2DD2A1C8D1F7300F0F527 /* TWCollectionViewController.m */,
+				24ED569F1C964DBA005405B4 /* TWCollectionViewCell.h */,
+				24ED56A01C964DBA005405B4 /* TWCollectionViewCell.m */,
 			);
 			path = TwoModel;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				24C2DD2C1C8D1F7300F0F527 /* TWCollectionViewController.m in Sources */,
 				24BF05331C891B0400C1C705 /* main.m in Sources */,
 				24C2DD231C8D1B6500F0F527 /* TwoModelViewController.m in Sources */,
+				24ED56A11C964DBA005405B4 /* TWCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

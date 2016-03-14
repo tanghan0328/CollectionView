@@ -8,7 +8,10 @@
 
 #import "TWCollectionViewController.h"
 #import "CollectionDefine.h"
+#import "TWCollectionViewCell.h"
+
 #define StaticCell  @"CollectionCell"
+
 @interface TWCollectionViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property (retain, nonatomic) UICollectionView *collectionView;
 
@@ -31,7 +34,7 @@
     if(_collectionView == nil){
         UICollectionViewFlowLayout *flowLayout =[[UICollectionViewFlowLayout alloc]init];
         _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:StaticCell];
+        [_collectionView registerClass:[TWCollectionViewCell class] forCellWithReuseIdentifier:@"TWCollectionViewCell"];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor clearColor];
@@ -51,16 +54,20 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:StaticCell forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 120, 100)];
-    imageView.image = [UIImage imageNamed:@"123_02"];
-    [cell.contentView addSubview:imageView];
-    
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, 120, 20)];
-    //label.text = [NSString stringWithFormat:@"顺序", (long)indexPath.row ];
-    label.text = @"测试使用";
-    [cell.contentView addSubview:label];
+    static NSString *identifier = @"TWCollectionViewCell";
+//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+//    [cell.contentView removeFromSuperview];
+//    cell.backgroundColor = [UIColor whiteColor];
+//    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 120, 100)];
+//    imageView.image = [UIImage imageNamed:@"123_02"];
+//    [cell.contentView addSubview:imageView];
+//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, 120, 20)];
+//    label.text = [NSString stringWithFormat:@"顺序 %ld", (long)indexPath.row ];
+//   // label.text = @"测试使用";
+//    [cell.contentView addSubview:label];
+    TWCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    int number = indexPath.row;
+    [cell setImageAndLabel:number];
     return cell;
 }
 

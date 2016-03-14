@@ -27,8 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //self.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     self.title = @"测试两种模式切换";
     self.navigationController.toolbarHidden = YES;
+    //self.navigationController.navigationBar.hidden = YES;
     _isShowListLayout = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     _rigthBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 44)];
@@ -69,7 +71,7 @@
     }
     _collectionController = [[TWCollectionViewController alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT)];
     _collectionController.hidden = NO;
-    [self.view addSubview:_collectionController];
+    [self.navigationController.view addSubview:_collectionController];
 }
 
 - (void)initAndLoadTable
@@ -80,7 +82,7 @@
     }
     _tableViewController = [[TabelViewController alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT)];
     _tableViewController.hidden = NO;
-    [self.view addSubview:_tableViewController];
+    [self.navigationController.view addSubview:_tableViewController];
 }
 
 @end
