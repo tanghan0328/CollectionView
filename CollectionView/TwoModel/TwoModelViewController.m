@@ -9,7 +9,6 @@
 #import "TwoModelViewController.h"
 #import "TabelViewController.h"
 #import "TWCollectionViewController.h"
-#import "CollectionDefine.h"
 
 @interface TwoModelViewController ()
 {
@@ -27,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     //self.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     self.title = @"测试两种模式切换";
     self.navigationController.toolbarHidden = YES;

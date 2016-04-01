@@ -7,7 +7,6 @@
 //
 
 #import "TWCollectionViewController.h"
-#import "CollectionDefine.h"
 #import "TWCollectionViewCell.h"
 
 #define StaticCell  @"CollectionCell"
@@ -66,9 +65,15 @@
 //   // label.text = @"测试使用";
 //    [cell.contentView addSubview:label];
     TWCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    int number = indexPath.row;
-    [cell setImageAndLabel:number];
+    cell.label.text = [NSString stringWithFormat:@"顺序为：%d",indexPath.row];
     return cell;
+    
+//    在UITableView中遇到过，原因是Cell的重用机制以及在自定义的Cell中将新建控件和为控件赋值写在了一起，然后不断的addSubview，最终导致Cell中的内容重叠。解决方法有两个。
+//    1、在自定义的Cell中把UI部分和为UI控件赋值的部分分开写。在TableView中为Cell某些控件赋值的时候调用Cell中赋值的方法，这样就不会重复的addsubview，也就不会出现Cell重合的问题了。
+//    2、如果一定要把赋值和创建UI控件写在一起，那么添加的时候添加到cell的contentView上。在tableView中，当取到一个重用Cell的时候就将cell中的值清空一下，也就是下面的那段代码。
+//    for (UIView *subView in cell.contentView.subviews) {
+//        [subView removeFromSuperview];
+//    }
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section

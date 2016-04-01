@@ -1,0 +1,17 @@
+//
+//  pchFile.pch
+//  CollectionView
+//
+//  Created by tang on 16/3/15.
+//  Copyright © 2016年 tang. All rights reserved.
+//
+
+#ifndef pchFile_pch
+#define pchFile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "CollectionDefine.h"
+
+#endif /* pchFile_pch */

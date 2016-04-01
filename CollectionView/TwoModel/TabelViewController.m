@@ -7,7 +7,7 @@
 //
 
 #import "TabelViewController.h"
-#import "CollectionDefine.h"
+
 
 @interface TabelViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (retain, nonatomic) UITableView *tableView;

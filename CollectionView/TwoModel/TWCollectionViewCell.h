@@ -13,5 +13,4 @@
 @property (nonatomic, retain)UIImageView *imageView;
 @property (nonatomic, retain)UILabel *label;
 
-- (void)setImageAndLabel:(int)indexpath;
 @end
